@@ -1,7 +1,7 @@
 'use strict';
 
 
-function validateNumber (req, res, next ) {
+module.exports =  (req, res, next ) => {
      let num = req.query.num;
     const rgx = /\b[0-9][0-9]*\b/g;
     let result=num.match(rgx);
@@ -17,4 +17,3 @@ function validateNumber (req, res, next ) {
     }
 }
 
-module.exports = {validateNumber};
